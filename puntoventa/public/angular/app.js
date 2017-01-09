@@ -1,0 +1,1 @@
+var app = angular.module('puntoVenta',[]).constant('API_URL','http://localhost:8000/api');
