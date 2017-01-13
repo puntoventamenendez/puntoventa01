@@ -69,7 +69,7 @@
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Id</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="idMarca" name="idMarca" value="@{{idMarcaModel}}" ng-model="idMarcaModel" ng-required="true" disabled="disabled">
+								<input type="text" class="form-control" id="idMarca" name="idMarca" value="@{{idMarcaModel}}" ng-model="idMarcaModel" disabled="disabled">
 							</div>
 						</div>
 
@@ -77,7 +77,7 @@
 							<label class="col-sm-3 control-label">Marca</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="nombreMarcaModel" name="nombreMarcaModel" value="@{{nombreMarcaModel}}" ng-model="nombreMarcaModel" ng-required="true">
-								<span ng-show="formMarca.nombreMarca.$invalid && formMarca.nombreMarca.$touched">La Marca es obligatoria</span>
+								<span ng-show="formMarca.nombreMarcaModel.$invalid && formMarca.nombreMarcaModel.$touched">La Marca es obligatoria</span>
 							</div>
 						</div>
 

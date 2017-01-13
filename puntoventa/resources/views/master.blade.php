@@ -34,7 +34,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav responsive" id="menu-izquierda" style="margin-left:2%">
-                <li role="presentation" class="active"><a href="/venta">Ventas</a></li>
+                <li role="presentation" class="active"><a href="api/venta">Ventas</a></li>
                 <li role="presentation" class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                   Compras <span class="caret"></span>
@@ -44,7 +44,7 @@
                     <li role="presentation"><a href="#">Proveedores</a></li>
                   </ul>
                 </li>
-                <li role="presentation"><a href="#">Inventario</a></li>
+                <li role="presentation"><a href="/api/inventario">Inventario</a></li>
                 <li role="presentation"><a href="/api/configuracion">Configuracion</a></li>
               </ul>
             </div>
@@ -74,5 +74,8 @@
     <script src="{{asset('angular/controllers/CajasController.js')}}"></script>
     <script src="{{asset('angular/controllers/CategoriasController.js')}}"></script>
     <script src="{{asset('angular/controllers/SubCategoriasController.js')}}"></script>
+    <script src="{{asset('angular/controllers/FormaPagoController.js')}}"></script>
+    <script src="{{asset('angular/controllers/ProductosController.js')}}"></script>
+    <script src="{{asset('angular/controllers/VentaController.js')}}"></script>
   </body>
 </html>

@@ -18,6 +18,7 @@
 		<a href="/api/configuracion/cajas" class="list-group-item">Caja</a>
 		<a href="/api/configuracion/categorias" class="list-group-item">Categoria</a>
 		<a href="/api/configuracion/subcategorias" class="list-group-item">SubCategoria</a>
+		<a href="/api/configuracion/formapagos" class="list-group-item">Forma de Pago</a>
 		<a href="/api/configuracion/usuarios" class="list-group-item">Usuarios</a>
 	</div>
 </div>

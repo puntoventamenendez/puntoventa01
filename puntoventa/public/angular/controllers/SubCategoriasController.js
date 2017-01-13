@@ -10,6 +10,7 @@ app.controller('SubCategoriasController',function($scope,$http, API_URL,$locatio
 	        	'Content-Type': 'application/json'
 	    	}
 		}).then(function successCallback(response) {
+			console.log(response);
 			$scope.subCategoriasResponse = angular.fromJson(response.data);
 		}, function errorCallback(response) {
 			console.log("error");
@@ -27,7 +28,7 @@ app.controller('SubCategoriasController',function($scope,$http, API_URL,$locatio
 	        	'Content-Type': 'application/json'
 	    	}
 		}).then(function successCallback(response){
-			console.log(response);
+			//console.log(response);
 			$scope.categoriasResponse = angular.fromJson(response.data);
 		}),function errorCallback(response)
 		{

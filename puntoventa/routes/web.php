@@ -15,9 +15,16 @@
 Route::get('/', function () {    return view('login'); });
 
 Route::get('/api/configuracion',function(){ return view('configuracion'); });
+Route::get('/api/inventario',function(){ return view('inventario'); });
 
-//Ventas
-Route::get('/venta', 'VentasController@index');
+//VENTAS
+Route::get('/venta',function(){ return view('venta');});
+Route::group(array('prefix' => 'api'), function() {   
+	Route::get('/venta/{id?}',['as' => 'ventaindex','uses' => 'VentasController@getDataProducto']);
+	//Route::post('/venta','UnidadesController@store');
+	//Route::post('/venta/{id}',['as'=>'unidadupdate','uses'=> 'UnidadesController@update']);
+	//Route::delete('/venta/{id}','UnidadesController@destroy');
+});
 
 //UNIDADES
 Route::get('/api/configuracion/unidades',function(){ return view('unidad') ;});
@@ -71,6 +78,27 @@ Route::group(array('prefix' => 'api'), function() {
 	Route::post('/configuracion/subcategoria','SubCategoriasController@store');
 	Route::post('/configuracion/subcategoria/{id}',['as'=>'subcategoriaupdate','uses'=> 'SubCategoriasController@update']);
 	Route::delete('/configuracion/subcategoria/{id}','SubCategoriasController@destroy');
+});
+
+
+//FORMA PAGO
+Route::get('/api/configuracion/formapagos',function(){ return view('formapago');});
+Route::group(array('prefix' => 'api'), function() {   
+	Route::get('/configuracion/formapago/{id?}',['as' => 'formapagoindex','uses' => 'FormaPagoController@index']);
+	Route::post('/configuracion/formapago','FormaPagoController@store');
+	Route::post('/configuracion/formapago/{id}',['as'=>'formapagoupdate','uses'=> 'FormaPagoController@update']);
+	Route::delete('/configuracion/formapago/{id}','FormaPagoController@destroy');
+});
+
+
+//PRODUCTO
+Route::get('/api/inventario/productos',function(){ return view('producto');});
+Route::group(array('prefix' => 'api'), function() {   
+	Route::get('/inventario/producto/{id?}',['as' => 'productoindex','uses' => 'ProductosController@index']);
+	Route::get('/inventario/inventario/{id?}',['as' => 'productoStockUpdatex','uses' => 'ProductosController@updateStock']);
+	Route::post('/inventario/producto','ProductosController@store');
+	Route::post('/inventario/producto/{id}',['as'=>'productoupdate','uses'=> 'ProductosController@update']);
+	Route::delete('/inventario/producto/{id}','ProductosController@destroy');
 });
 
 //Unidades

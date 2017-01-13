@@ -1,11 +1,12 @@
 <?php
-namespace App\Http\Controllers;
 
+namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\pv_subcategoria;
+use App\pv_subcategoria_vista;
 use App\pv_categoria;
 
 class SubCategoriasController extends Controller
@@ -20,10 +21,17 @@ class SubCategoriasController extends Controller
         if($id==null)
         {
             //return pv_subcategoria::orderBy('ps_id','asc')->get();
-            return BD::table('pv_subcategoria')
+            $data      = pv_subcategoria_vista::all();
+            return $data;
+            /*
+            //$dataCategoria = pv_categoria::find(2)->categoria;
+            return \BD::table('pv_subcategoria')
             ->join('pv_categoria', 'pv_subcategoria.ps_id', '=', 'pv_categoria.pc_id')
             ->select('pv_subcategoria.*', 'pv_categoria.pc_categoria')
             ->get();
+            */
+            //dd($dataCategoria);
+            //return $dataCategoria;
 
         }else{
             return $this->show($id);

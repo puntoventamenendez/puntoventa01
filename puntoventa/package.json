@@ -1,4 +1,6 @@
 {
+  "name": "Punto Venta",
+  "main": "localhost:8000/",
   "private": true,
   "scripts": {
     "prod": "gulp --production",

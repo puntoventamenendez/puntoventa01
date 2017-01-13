@@ -36,9 +36,9 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="subcat in subCategoriasResponse">
-					<td>@{{subcat.pc_categoria}}</td>
 					<td>@{{subcat.ps_id}}</td>
 					<td>@{{subcat.pc_categoria}}</td>
+					<td>@{{subcat.ps_subcategoria}}</td>
 					<td>
 						<button class="btn btn-warning btn-xs btn-detail" ng-click="toggle('editarSubCategoria',subcat.ps_id)">
 						<span class="glyphicon glyphicon-edit"></span>
